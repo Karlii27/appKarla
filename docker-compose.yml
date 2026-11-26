@@ -1,0 +1,10 @@
+name: app-karla
+services:
+  aplicacion:
+    build: .
+    container_name: app-karla
+    ports:
+      - "8027:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
